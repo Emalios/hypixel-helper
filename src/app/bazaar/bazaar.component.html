@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<p class="font-medium leading-tight text-base mt-0 mb-2">
+  Bazaar page, here you can select one item and see his prices through the bazaar.
+</p>
+
+  <div class="w-full max-w-xs">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="item-name">
+          Item Name
+        </label>
+        <input [(ngModel)]="itemName" name="itemName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="item-name" type="text" placeholder="Item Name">
+      </div>
+      <div class="flex flex-col justify-center">
+        <button (click)="onSubmit()" class="content-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline self-center">
+          View Prices
+        </button>
+      </div>
+    </form>
+  </div>
