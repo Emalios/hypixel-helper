@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { BazaarComponent } from './bazaar/bazaar.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { NgxEchartsModule } from 'ngx-echarts';
+import { AuctionComponent } from './auction/auction.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,14 +23,18 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    BazaarComponent
+    BazaarComponent,
+    AuctionComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
